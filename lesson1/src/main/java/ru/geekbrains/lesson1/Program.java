@@ -27,21 +27,43 @@ public class Program {
         Product bottleOfMilk1 = new BottleOfMilk("ООО Чистый источник", "Бутылка с молоком", 115, 1.5, 10);
         System.out.println(bottleOfMilk1.displayInfo());
 
+        Product chocolate1 = new Chocolate("Мням Мням", "Быстрое наслаждение", 55, "молочный", 200, "орехи");
+        System.out.println(chocolate1.displayInfo());
+
+        Product chocolate2 = new Chocolate("Мням Мням", "Брутальный вкус", 75, "горький", 250, "ликер");
+        System.out.println(chocolate2.displayInfo());
+
+        Product chocolate3 = new Chocolate("Мням Мням", "Воздушная радость", 75, "белый", 250, "йогурт");
+        System.out.println(chocolate3.displayInfo());
+
         List<Product> products = new ArrayList<>();
         products.add(bottleOfWater1);
         products.add(bottleOfWater2);
         products.add(bottleOfMilk1);
         products.add(bottleOfWater4);
         products.add(bottleOfWater3);
+        products.add(chocolate1);
+        products.add(chocolate2);
+        products.add(chocolate3);
+
 
         VendingMachine vendingMachine = new VendingMachine(products);
         BottleOfWater bottleOfWaterResult = vendingMachine.getBottleOfWater(2);
+        Chocolate getChocolateResult = vendingMachine.getChocolate("молочный");
         if (bottleOfWaterResult != null){
             System.out.println("Вы купили: ");
             System.out.println(bottleOfWaterResult.displayInfo());
         }
         else {
             System.out.println("Такой бутылки с водой нет в автомате.");
+        }
+
+        if (getChocolateResult != null){
+            System.out.println("Вы купили: ");
+            System.out.println(getChocolateResult.displayInfo());
+        }
+        else {
+            System.out.println("Такой шоколадки нет в автомате.");
         }
     }
 

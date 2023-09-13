@@ -22,4 +22,15 @@ public class VendingMachine {
         return null;
     }
 
+    public Chocolate getChocolate(String description){
+        for (Product product : products){
+            if (product instanceof Chocolate){
+                if (((Chocolate)product).getDescription().equalsIgnoreCase(description)){
+                    return (Chocolate)product;
+                }
+            }
+        }
+        return null;
+    }
+
 }

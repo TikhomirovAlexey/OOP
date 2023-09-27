@@ -1,3 +1,5 @@
+package Study_2.ООП.homework.lesson2;
+
 import java.util.ArrayList;
 
 public class Main {

@@ -1,3 +1,5 @@
+package Study_2.ООП.homework.lesson3.task2;
+
 public class Worker extends Employee {
 
     public Worker(String name, String surname, int age, double salary) {

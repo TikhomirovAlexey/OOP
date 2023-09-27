@@ -1,3 +1,5 @@
+package Study_2.ООП.homework.lesson3.task2;
+
 public abstract class Employee implements Comparable<Employee> {
 
     protected String name;

@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson1;
+package Study_2.ООП.homework.lesson1.src.main.java.ru.geekbrains.lesson1;
 
 public class BottleOfWater extends Product{
 

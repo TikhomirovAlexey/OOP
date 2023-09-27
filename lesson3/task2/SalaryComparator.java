@@ -1,3 +1,5 @@
+package Study_2.ООП.homework.lesson3.task2;
+
 import java.util.Comparator;
 
 public class SalaryComparator implements Comparator<Employee> {

@@ -1,4 +1,4 @@
-package Study_2.ООП.homework.lesson7;
+package ru.geekbrains.lesson7.observer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +19,9 @@ public class JobAgency implements Publisher {
     }
 
     @Override
-    public void sendOffer(String companyName, double salary) {
+    public void sendOffer(String companyName, VacanvyInterface vacancy) {
         for (Observer observer: observers) {
-            observer.receiveOffer(companyName, salary);
+            observer.receiveOffer(companyName, vacancy);
         }
     }
 }

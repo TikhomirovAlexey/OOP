@@ -1,4 +1,4 @@
-package Study_2.ООП.homework.lesson7;
+package ru.geekbrains.lesson7.observer;
 
 public interface Publisher {
 
@@ -20,7 +20,7 @@ public interface Publisher {
      * @param companyName
      * @param salary
      */
-    void sendOffer(String companyName, double salary);
+    void sendOffer(String companyName, VacanvyInterface vacancy);
 
 
 }

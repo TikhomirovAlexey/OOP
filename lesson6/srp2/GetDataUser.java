@@ -1,4 +1,4 @@
-package Study_2.ООП.homework.lesson6.srp2;
+package Study_2.OOP.homework.lesson6.srp2;
 
 import java.util.Scanner;
 

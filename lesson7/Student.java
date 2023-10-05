@@ -1,4 +1,4 @@
-package Study_2.ООП.homework.lesson7;
+package ru.geekbrains.lesson7.observer;
 
 import java.util.Random;
 
@@ -15,15 +15,15 @@ public class Student implements Observer {
     }
 
     @Override
-    public void receiveOffer(String companyName, double salary) {
-        if (minSalary <= salary){
-            System.out.printf("Студент %s (%f) >>> Мне нужна эта работа! [%s - %f]\n",
-                    name, minSalary, companyName, salary);
-            minSalary = salary;
+    public void receiveOffer(String companyName, VacanvyInterface vacancy) {
+        if (minSalary <= vacancy.getSalary()){
+            System.out.printf("Студент %s (%f) >>> Мне нужна эта работа! [%s - %f - %s]\n",
+                    name, minSalary, companyName, vacancy.getSalary(), vacancy.getType());
+            minSalary = vacancy.getSalary();
         }
         else {
             System.out.printf("Студент %s >>> Я найду работу получше (%f)! [%s - %f]\n",
-                    name, minSalary, companyName, salary);
+                    name, minSalary, companyName, vacancy.getSalary());
         }
     }
 }

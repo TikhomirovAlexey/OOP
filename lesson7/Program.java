@@ -1,4 +1,4 @@
-package Study_2.ООП.homework.lesson7;
+package ru.geekbrains.lesson7.observer;
 
 public class Program {
 
@@ -12,9 +12,12 @@ public class Program {
     public static void main(String[] args) {
 
         JobAgency jobAgency = new JobAgency();
-        Company geekBrains = new Company("GeekBrains", 70000, jobAgency);
-        Company google = new Company("Google", 100000, jobAgency);
-        Company yandex = new Company("Yandex", 120000, jobAgency);
+        VacanvyInterface vacancy1 = new Vacancy("developer", 35000);
+        VacanvyInterface vacancy2 = new Vacancy("designer", 75000);
+        VacanvyInterface vacancy3 = new Vacancy("manager", 85000);
+        Company geekBrains = new Company("GeekBrains",  jobAgency, vacancy1);
+        Company google = new Company("Google",  jobAgency, vacancy2);
+        Company yandex = new Company("Yandex",  jobAgency, vacancy3);
 
         Master ivanov = new Master("Ivanov");
         Master petrov = new Master("Petrov");

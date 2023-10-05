@@ -1,4 +1,4 @@
-package Study_2.ООП.homework.lesson7;
+package ru.geekbrains.lesson7.observer;
 
 import java.util.Random;
 
@@ -7,19 +7,20 @@ public class Company {
     private static  Random random = new Random();
     private String companyName;
     private  double maxSalary;
-
     private Publisher jobAgency;
 
+    private VacanvyInterface vacancy;
 
-    public Company(String companyName, double maxSalary, Publisher jobAgency) {
+
+    public Company(String companyName, Publisher jobAgency, VacanvyInterface vacancy) {
         this.companyName = companyName;
         this.maxSalary = maxSalary;
         this.jobAgency = jobAgency;
+        this.vacancy = vacancy;
     }
 
     public void needEmployee(){
-        double salary = random.nextDouble(3000, maxSalary);
-        jobAgency.sendOffer(companyName, salary);
+        jobAgency.sendOffer(companyName, vacancy);
     }
 
 

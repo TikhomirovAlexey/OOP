@@ -1,7 +1,7 @@
-package Study_2.ООП.homework.lesson7;
+package ru.geekbrains.lesson7.observer;
 
 public interface Observer {
 
-    void receiveOffer(String companyName, double salary);
+    void receiveOffer(String companyName, VacanvyInterface vacancy);
 
 }
